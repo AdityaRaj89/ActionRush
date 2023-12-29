@@ -20,7 +20,7 @@
                     </a>
                   </li>
         
-                  <li class="nav-item">
+                  <li class="nav-item active">
                     <b></b>
                     <b></b>
                     <a href="#">
@@ -29,10 +29,10 @@
                     </a>
                   </li>
         
-                  <li class="nav-item active">
+                  <li class="nav-item">
                     <b></b>
                     <b></b>
-                    <a href="#">
+                    <a href="/plusActivity">
                       <i class="fa fa-calendar-check nav-icon"></i>
                       <span class="nav-text">+Activity</span>
                     </a>
@@ -57,6 +57,71 @@
                   </li>
                 </ul>
               </nav>
+
+              <div class="submain">
+                <div class="subpt1">
+                    <div class="spt1upper">
+                        <div class="sup1">
+                            <img class="profileimg" src="https://www.shutterstock.com/image-vector/woman-modern-icon-avatar-design-260nw-2358837033.jpg">
+                            <h5>User Sixty Nine</h5>
+                            <h6>@user69</h6>
+                            <h6>⭐💻3rd Year Student at NIT Patna💻⭐🐍💬🐍 I speak fluent C++ , Python , JavaScript , and sarcasm. 🐍💬🐍 ........Ctrl + Alt + Delete all bugs. 💥🐞</h6>
+                        </div>
+                        <div class="sup2">
+                            <div class="ppl">
+
+                            </div>
+                            <div class="pplx">
+                                
+                            </div>
+                            <div class="ppl">
+                                
+                            </div>
+                            <div class="pplx">
+                                
+                            </div>
+                            <div class="ppl">
+                                
+                            </div>
+                            <div class="pplx">
+                                
+                            </div>
+                            <div class="ppl">
+                                
+                            </div>
+                            <div class="pplx">
+                                
+                            </div>
+                            <div class="ppl">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spt1lower">
+
+
+                            <div class="boast">
+                                <% user.activities.forEach(element =>{ %>
+                                    <div class="bimg">
+                                        <img class = "bimz" src ="<%=element.image %>">
+                                    </div>
+                                    <div class = "capt">
+                                        <h6><%= element.caption %> </h6>
+                                    </div>
+                                    <% }); %>
+                                
+                            </div>
+                            </div>
+                        
+                    </div>
+                </div>
+                <div  class="subpt2">
+                    <div class="yimg"></div>
+                </div>
+
+
+              </div>
+
             </main>
         </body>
     </html>

@@ -85,7 +85,8 @@ router.post('/addActivityxx',async function(req,res){
    user.activities.forEach(async element => {
     if(element.sport === req.body.dplist)
     {
-      
+      element.image  = req.body.Image,
+      element.caption = req.body.Caption,
       element. distraveled = req.body.Distance,
       element.duration = req.body.Duration,
       element. height = req.body.Climbing,
@@ -105,8 +106,9 @@ router.post('/addActivityxx',async function(req,res){
 });
 
 
-router.get('/profile',function(req,res){
-   res.render("profile");
+router.get('/profile',async function(req,res){
+   const user = await userModel.findOne({username:req.session.passport.user});
+   res.render("profile",{user});
 });
 
 

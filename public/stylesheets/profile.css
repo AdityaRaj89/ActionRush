@@ -44,9 +44,10 @@ body {
 /* MAIN MENU */
 
 main {
+       overflow: hidden;
   display: grid;
   grid-template-columns: 13% 87%;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   margin: 40px;
   background: rgb(254, 254, 254);
@@ -169,3 +170,125 @@ main {
   flex-direction: row;
   grid-template-columns: 75% 25%;
 }
+
+
+.submain{
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 77% 23%;
+}
+
+.subpt1{
+    display: grid;
+    background-color: pink;
+    grid-template-rows: 40% 60%;
+    height: 100%;
+}
+
+.subpt2{
+    background-color: magenta;
+}
+
+.spt1upper{
+    overflow: hidden;
+    height: 100%;
+    background-color: purple;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    
+}
+
+.spt1lower{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y:auto;
+    height: 60vh;
+    padding: 15px;
+    background-color: rgb(136, 25, 44);
+    align-items:center;
+    justify-content:space-between;
+}
+
+.sup1{
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+.sup2{
+    height:40vh;
+    object-fit: cover;
+    overflow-y: auto;
+    background-color: peru;
+    
+}
+
+.yimg{
+    background-image: url('https://img.freepik.com/premium-photo/young-fit-woman-practice-yoga-doing-headstand-sirshasana-yoga-studio_72389-4422.jpg');
+
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.profileimg{
+   margin-bottom: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.ppl{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+
+.pplx{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(179, 161, 161);
+}
+
+.sup2-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+  }
+
+  .boast{
+    display:grid;
+    grid-template-rows: 75% 25%;
+    background-color: orange;
+    height:58vh;
+    width:33%;
+    margin-bottom: 6px;
+  }
+
+  .boastx{
+    display:grid;
+    grid-template-rows: 75% 25%;
+    background-color: rgb(18, 143, 39);
+    height:58vh;
+    width:33%;
+    margin-bottom: 6px;
+
+  }
+
+  .bimg{
+    overflow: hidden;
+    position: relative;
+  }
+ 
+  .capt{
+   background-color: blueviolet;
+    color: hotpink;
+  }
+
+  .bimz{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
