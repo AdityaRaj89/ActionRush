@@ -173,28 +173,30 @@ main {
 
 
 .submain{
-    background-color: yellow;
+
     display: grid;
-    grid-template-columns: 77% 23%;
+    grid-template-columns: 80% 20%;
 }
 
 .subpt1{
     display: grid;
-    background-color: pink;
+   
     grid-template-rows: 40% 60%;
     height: 100%;
 }
 
 .subpt2{
-    background-color: magenta;
+    width: 100%;
+   
 }
 
 .spt1upper{
     overflow: hidden;
     height: 100%;
-    background-color: purple;
+    border-bottom: 2px solid black; 
     display: grid;
     grid-template-columns: 40% 60%;
+    background-color: #eee8e870;
     
 }
 
@@ -204,28 +206,36 @@ main {
     overflow-y:auto;
     height: 60vh;
     padding: 15px;
-    background-color: rgb(136, 25, 44);
+   
     align-items:center;
     justify-content:space-between;
 }
+.spt1lower::-webkit-scrollbar {
+  display: none;
+}
 
 .sup1{
-    background-color: red;
+    
     align-items: center;
     justify-content: center;
     flex-direction: column;
     display: flex;
 }
+
 .sup2{
     height:40vh;
     object-fit: cover;
     overflow-y: auto;
-    background-color: peru;
+   
+    padding: 6px;
     
+}
+.sup2::-webkit-scrollbar {
+  display: none;
 }
 
 .yimg{
-    background-image: url('https://img.freepik.com/premium-photo/young-fit-woman-practice-yoga-doing-headstand-sirshasana-yoga-studio_72389-4422.jpg');
+   object-fit: cover;
 
     background-size: cover; 
     background-position: center; 
@@ -234,9 +244,10 @@ main {
 }
 
 .profileimg{
-   margin-bottom: 10px;
-    height: 100px;
-    width: 100px;
+  position: relative; 
+  top: 0;
+    height: 150px;
+    width: 150px;
     border-radius: 100%;
 }
 
@@ -253,37 +264,30 @@ main {
     background-color: rgb(179, 161, 161);
 }
 
-.sup2-webkit-scrollbar {
-    display: none; /* Hide the scrollbar */
-  }
 
   .boast{
     display:grid;
     grid-template-rows: 75% 25%;
-    background-color: orange;
+    
     height:58vh;
     width:33%;
     margin-bottom: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    
   }
 
-  .boastx{
-    display:grid;
-    grid-template-rows: 75% 25%;
-    background-color: rgb(18, 143, 39);
-    height:58vh;
-    width:33%;
-    margin-bottom: 6px;
-
-  }
 
   .bimg{
     overflow: hidden;
     position: relative;
+    box-shadow: 2px 2px 2px rgb(187, 187, 187);
   }
  
   .capt{
-   background-color: blueviolet;
-    color: hotpink;
+   
+    color: rgb(0, 0, 0);
   }
 
   .bimz{
@@ -292,3 +296,41 @@ main {
     object-fit: cover;
     position: absolute;
   }
+
+
+  .list1 {
+    background-color: #e6a7c3b5;
+    background-image: linear-gradient(240deg, #ea1adc 0%, #fce5c3 100%);
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: 15% 60% 25%;
+    align-items: center;
+    border-radius: 14px;
+    margin-bottom: 5px;
+    color: #484d53;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
+  }
+
+  .list2{
+    background-color: #ecfcc376;
+    background-image: linear-gradient(240deg, #12e5f4 100%, #97e7d1 0%);
+  }
+  
+  .btn {
+    display: block;
+    padding: 6px 20px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline: none;
+    text-decoration: none;
+    color: #484b57;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
