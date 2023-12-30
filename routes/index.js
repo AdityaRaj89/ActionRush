@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 const userModel = require("./users");
 const passport = require('passport');
 const localStrategy = require("passport-local");
-
+const postMx = require('./posts');
 router.use(bodyParser.urlencoded({
   extended:true
 }));
@@ -35,23 +35,24 @@ router.post('/register',async function(req,res){
 
 });
 
+router.get("/login",function(req,res){
+  res.render("login")
+});
+
+router.post("/login",passport.authenticate("local",{
+  successRedirect:"/dashboard",
+  failureRedirect:"/login"
+}),function(req,res){
+
+});
+
+
+
 router.get('/dashboard', async function(req, res) {
   const user = await userModel.findOne({username:req.session.passport.user})
   console.log(user.username);
   res.render("dashboard",{user});
 });
-
-// router.get('/addActivity/:acname',async function(req,res){
-  
-//   const user =await userModel.findOne({username:req.session.passport.user});
-//   if(user.activities.includes(`${req.params.acname}`))
-//   res.render("dashboard",{user});
-//   else{
-//       user.activities.push(`${req.params.acname}`);
-//   await user.save();
-//   res.render("dashboard",{user});
-//   }
-// });
 
 
 router.get('/addActivity/:acname',async function(req,res){
@@ -107,9 +108,30 @@ router.post('/addActivityxx',async function(req,res){
 
 
 router.get('/profile',async function(req,res){
-   const user = await userModel.findOne({username:req.session.passport.user});
+   const user = await userModel.findOne({username:req.session.passport.user}).populate('posts');
    res.render("profile",{user});
 });
+
+router.get('/addpost',function(req,res){
+  res.render("addPost");
+});
+
+
+router.post('/addpostx',async function(req,res){
+   const user = await userModel.findOne({
+    username : req.session.passport.user
+   });
+   const newpost = await postMx.create({
+    userid: user._id,
+    image : req.body.imagex,
+    captionpost: req.body.caption
+   });
+
+   user.posts.push(newpost._id);
+   await user.save();
+   res.render("addPost");
+});
+
 
 
 module.exports = router;

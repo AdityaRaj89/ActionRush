@@ -23,7 +23,7 @@
                   <li class="nav-item active">
                     <b></b>
                     <b></b>
-                    <a href="#">
+                    <a href="/profile">
                       <i class="fa fa-user nav-icon"></i>
                       <span class="nav-text">Profile</span>
                     </a>
@@ -41,9 +41,9 @@
                   <li class="nav-item">
                     <b></b>
                     <b></b>
-                    <a href="#">
+                    <a href="/addPost">
                       <i class="fa fa-person-running nav-icon"></i>
-                      <span class="nav-text">Activities</span>
+                      <span class="nav-text">Add Post</span>
                     </a>
                   </li>
         
@@ -63,7 +63,7 @@
                     <div class="spt1upper">
                         <div class="sup1">
                             <img class="profileimg" src="https://www.shutterstock.com/image-vector/woman-modern-icon-avatar-design-260nw-2358837033.jpg">
-                            <h5>User Sixty Nine</h5>
+                            <h5><%=user.posts.length%></h5>
                             <h6>@user69</h6>
                             <h6>⭐💻3rd Year Student at NIT Patna💻⭐🐍💬🐍 I speak fluent C++ , Python , JavaScript , and sarcasm. 🐍💬🐍 ........Ctrl + Alt + Delete all bugs. 💥🐞</h6>
                         </div>
@@ -100,8 +100,9 @@
                     <div class="spt1lower">
 
 
+                      <% user.posts.forEach(element =>{ %>
+
                             <div class="boast">
-                                <% user.activities.forEach(element =>{ %>
                                     <div class="bimg">
                                         <img class = "bimz" src ="<%=element.image %>">
                                     </div>

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const plm = require('passport-local-mongoose');
+const posts = require('./posts');
 mongoose.connect("mongodb://127.0.0.1:27017/ActionRush");
 const userSchema = mongoose.Schema({
   username  : String,
@@ -15,7 +16,11 @@ const userSchema = mongoose.Schema({
     image : String,
     caption : String 
 }],
-  profileimg : String
+  profileimg : String,
+  posts:[{
+    type : mongoose.Schema.Types.ObjectId,
+    ref: "cardModel"
+  }]
 });
 
 userSchema.plugin(plm)
