@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const plm = require('passport-local-mongoose');
 const posts = require('./posts');
-mongoose.connect("mongodb://127.0.0.1:27017/ActionRush");
+mongoose.connect("mongodb+srv://coderocket:Aditya89@actionrush.c3zd5wk.mongodb.net/?retryWrites=true&w=majority");
 const userSchema = mongoose.Schema({
   username  : String,
   password  : String,
